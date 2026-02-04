@@ -48,4 +48,14 @@ public class User {
         this.username = username;
     }
 
+    public void incrementAttempts() {
+        this.attempts += 1;
+    }
+
+    public void resetAttempts() {
+        this.attempts = 0;
+    }
+
+
+
 }
