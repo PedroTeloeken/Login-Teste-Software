@@ -2,17 +2,19 @@ package org.example;
 
 public class User {
 
+    int id;
     String username;
     String email;
     String password;
     int attempts;
     boolean blocked;
 
-    public User(String username, String email, String password) {
+    public User(int id, String username, String email, String password) {
+        this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
-        this.attempts = attempts;
+        this.attempts = 3;
         this.blocked = blocked;
     }
 
@@ -48,14 +50,27 @@ public class User {
         this.username = username;
     }
 
-    public void incrementAttempts() {
-        this.attempts += 1;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void decrementAttempts() {
+        this.attempts -= 1;
     }
 
     public void resetAttempts() {
         this.attempts = 0;
     }
-
-
-
 }
