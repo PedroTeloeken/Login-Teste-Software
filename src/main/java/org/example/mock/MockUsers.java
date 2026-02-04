@@ -1,4 +1,6 @@
-package org.example;
+package org.example.mock;
+
+import org.example.User;
 
 import java.util.ArrayList;
 import java.util.List;
